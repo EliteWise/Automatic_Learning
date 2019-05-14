@@ -1,0 +1,5 @@
+- Sleep l'appli pendant qu'on affiche une popup (Avec une barre de chargement par exemple) pour l'empêcher de crash
+- Créer une sous appli pendant le training avec une barre de progression en faisant un hide sur la main app
+
+https://stackoverflow.com/questions/50596027/pyqt5-qthread-not-working-gui-still-freezing
+https://stackoverflow.com/questions/41545300/pyqt4-equivilent-to-time-sleep

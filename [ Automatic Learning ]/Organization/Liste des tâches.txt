@@ -1,0 +1,6 @@
+- Exécuter un fichier .py en backend
+X Envoyer les données sur une database local
+- Mettre une image de fond
+- Faire charger la progress bar durant l'exécution du fichier .py en back
+- Récupérer les données de la database sur l'appli pour pouvoir en afficher certaines (Graphiques ? / Accuracy)
+- #Compétence Win

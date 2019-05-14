@@ -1,0 +1,54 @@
+# ----- Preparation of the SVM Request ----- #
+
+		if algo == 'SVM':
+			if query == 'INSERT':
+				sql = 'INSERT INTO ' + algo + ' (y, test_size, kernel) VALUES (%s, %s, %s)'
+				val = (y, test_size, kernel)
+			else:
+				sql = 'IF EXISTS SELECT * FROM svm WHERE client = ' + client
+
+		# ----- Preparation of the Reglin Request ----- #
+
+		elif algo == 'Reglin':
+			if query == 'INSERT':
+				sql = 'INSERT INTO ' + algo + ' (target, test_size) VALUES (%s, %s)'
+				val = (target, test_size)
+			else:
+				sql = 'IF EXISTS SELECT * FROM reglin WHERE client = ' + client
+
+		# ----- Preparation of the KNN Request ----- #
+
+		elif algo == 'KNN':
+			if query == 'INSERT':
+				sql = 'INSERT INTO ' + algo + ' (target, test_size, neighbors) VALUES (%s, %s, %s)'
+				val = (target, test_size, neighbors)
+			else:
+				sql = 'IF EXISTS SELECT * FROM knn WHERE client = ' + client
+
+		# ----- Preparation of the K-Means Request ----- #
+
+		elif algo == 'KMeans':
+			if query == 'INSERT':
+				sql = 'INSERT INTO ' + algo + ' (column_name, number_clusters) VALUES (%s, %s)'
+				val = (column_name, number_clusters)
+			else:
+				sql = 'IF EXISTS SELECT * FROM kmeans WHERE client = ' + client
+
+		# ----- Preparation of the CNN Request ----- #
+
+		elif algo == 'CNN':
+			if query == 'INSERT':
+				sql = 'INSERT INTO ' + algo + ' (accuracy, loss, model_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
+				val = (img_x, img_y, img_dim, n_1, n_2, n_3, n_4, n_5, a_1, a_2, a_3, a_4, a_5, \
+				 	padding, optimizer, metrics, batch_size, epochs, name_train, validation_split, verbose)
+			else:
+				sql = 'IF EXISTS SELECT * FROM cnn WHERE client = ' + client
+
+		# ----- Preparation of the RNN Request ----- #
+
+		elif algo == 'RNN':
+			if query == 'INSERT':
+				sql = 'INSERT INTO ' + algo + ' (accuracy, loss, model_name) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
+				val = (n_1, n_2, a_1, a_2, padding, optimizer, metrics, batch_size, epochs, name_train, validation_split, verbose)
+			else:
+				sql = 'SELECT * FROM rnn WHERE client = ' + client

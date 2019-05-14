@@ -1,0 +1,28 @@
+- NaN -
+
+- Faire un pourcentage du nombre de NaN par colonne en fonction du nombre de lignes du Dataframe pour décider si elle doit être drop ou non
+- Si elle n'est pas drop mais qu'elle contient des NaN, remplacer ces derniers par une moyenne des valeurs (Précédentes ou totales)
+
+- Optimisation -
+
+Sous-types d'Algos :
+SVM : Linear / Poly / Sigmoid
+
+Types de Classifiers :
+- Logistic Regression / Random Forests / NN (MLP) / SVM 
+
+- Tester différents sous-types d'Algos pour les Algos de Machine Learning, comparer leur résultats et garder seulement celui le plus élevé en indiquant quel sous-type d'Algo a pu permettre de donner ce résultat
+- Proposer tous les sous-types d'Algos, qu'ils soient tous utilisables séparemment
+- Faire des comparaisons avec le même sous-type d'Algo (Le fit 3 fois et prendre la meilleure accuracy par exemple)
+- Faire des comparaisons entre les Algos (KNN / SVM / Reglin)
+- Faire des comparaisons entre les Algos de Classifier, etc
+
+
+- Database -
+
+- Si le client a déjà fait un fit, les paramètres du model / pipeline ayant été save dans une Database lui sont proposés pour son prochain fit même si l'application a été fermé. (Un récapitulatif des paramètres pourra être donné à ce moment là, pour que le client puisse valider)
+
+
+https://stackabuse.com/classification-in-python-with-scikit-learn-and-pandas/
+https://stackabuse.com/linear-regression-in-python-with-scikit-learn/
+
